@@ -1,15 +1,16 @@
 <?php
+
 class joueur
 {
     private $pseudo;
     private $taille;
     private $main;
 
-    function __construct($joueur,$main,$valeur)
+    function __construct($joueur, $main, $valeur)
     {
-        if(empty($main)) {
+        if (empty($main)) {
             $this->main = [];
-        }else{
+        } else {
             $this->main = $main;
             $this->taille = $valeur;
         }
@@ -23,9 +24,9 @@ class joueur
 
     public function getValueTot()
     {
-        $taille=0;
-        foreach($this->main as $carte){
-            $taille+=$carte->getValue();
+        $taille = 0;
+        foreach ($this->main as $carte) {
+            $taille += $carte->getValue();
         }
         return $taille;
     }
@@ -34,6 +35,7 @@ class joueur
     {
         return $this->pseudo;
     }
+
     public function getMain()
     {
         return $this->main;
