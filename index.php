@@ -1,11 +1,12 @@
 <?php
-session_start();
 
 require "cartes.php";
 
 require "game.php";
 
 require "joueur.php";
+
+session_start();
 
 if(!isset($_POST['jouer'])){
     $deck = new deck();
